@@ -7,12 +7,18 @@ describe "Static Pages" do
       visit '/static_pages/home'
       page.should have_selector('h1', :text =>'Sample App')
     end
-    it "Should have the right title" do
+    it "Should have the base title" do
       visit '/static_pages/home'
       page.should have_selector('title', 
-           :text =>'Ruby on rails sample | home')
+           :text =>'James awesome Ruby tutorial sample app')
     end
-  end
+    it "Should not have a custom title" do
+      visit '/static_pages/home'
+      page.should_not have_selector('title',
+           :text =>'| home')
+    end
+   end
+
   describe "Help page" do   
     it "Should have the content 'Help'" do
       visit '/static_pages/help'
@@ -21,7 +27,7 @@ describe "Static Pages" do
     it "Should have the right title" do
       visit '/static_pages/help'
       page.should have_selector('title', 
-           :text =>'Ruby on rails sample | help')
+           :text =>'James awesome Ruby tutorial sample app | help')
     end
   end
   describe "About page" do   
@@ -32,7 +38,7 @@ describe "Static Pages" do
     it "Should have the right title" do
       visit '/static_pages/about'
       page.should have_selector('title', 
-           :text =>'Ruby on rails sample | About Us')
+           :text =>'James awesome Ruby tutorial sample app | About Us')
     end
   end
     describe "Contact page" do   
@@ -43,7 +49,7 @@ describe "Static Pages" do
     it "Should have the right title" do
       visit '/static_pages/contact'
       page.should have_selector('title', 
-           :text =>'Ruby on rails sample | contact us')
+           :text =>'James awesome Ruby tutorial sample app | contact us')
     end
   end
 end
