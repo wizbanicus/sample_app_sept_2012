@@ -1,0 +1,55 @@
+[DEFAULT]
+pause = yes
+media-check = no
+mount_dir = /mnt/
+windows_read = yes
+ogg_decoder_option = -q -d wav -f
+driver = generic-mmc
+external_decoding = no
+mp3_decoder_option = -q -w
+tempdir = /tmp/
+ask_root = yes
+genisoimage = /usr/bin/genisoimage
+device = /dev/cdrom
+image = burn_image.iso
+burnfree = yes
+mp3_decoder = /usr/bin/mpg321
+cdrdao = /usr/bin/cdrdao
+size = 700
+speed = 4
+wodim = /usr/bin/wodim
+ogg_decoder = /usr/bin/ogg123
+
+[general]
+ask_root = yes
+external_decoding = no
+
+[executables]
+wodim = /usr/bin/wodim
+cdrdao = /usr/bin/cdrdao
+genisoimage = /usr/bin/genisoimage
+mp3_decoder = /usr/bin/mpg321
+mp3_decoder_option = -q -w
+ogg_decoder = /usr/bin/ogg123
+ogg_decoder_option = -q -d wav -f
+
+[ISO]
+tempdir = /tmp/
+image = burn_image.iso
+windows_read = yes
+mount_dir = /mnt/
+
+[CD-writer]
+device = /dev/cdrom
+speed = 4
+driver = generic-mmc
+burnfree = yes
+
+[CD-reader]
+device = /dev/cdrom
+driver = 
+
+[Media]
+media-check = no
+size = 700
+
